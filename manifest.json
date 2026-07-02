@@ -1,0 +1,30 @@
+{
+  "_comment1" :"it is the lastest version that chrome requires us to work on",
+  "manifest_version": 3,
+
+  "_comment2" :"Below three are the things that user sees",
+  "name": "Block T-Series",
+  "version": "1.0",
+  "description": "Removes T-Series videos and shorts from Home, Search, and Shorts feed.",
+
+  "_comment3" :"it is for advance feature access like cookies camera access etc.",
+  "permissions": [],
+  
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "_comment4" :"it is the most important part of the extension",
+  "content_scripts": [
+    {
+      "_comment5": "Tell which URLs to run script on",
+      "matches": ["*://*.youtube.com/*"],
+
+        "_comment6": "Tell which script to run",
+      "js": ["content.js"],
+
+      "_comment7" :"Tell when to run the script, in this case, after the page has loaded",
+      "run_at": "document_end"
+    }
+  ]
+}
