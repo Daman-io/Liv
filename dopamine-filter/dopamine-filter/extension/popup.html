@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Mindful Feed</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>Mindful Feed</h1>
+
+  <section>
+    <div class="row">
+      <span>Training labels collected</span>
+      <strong id="labelCount">0 / 30</strong>
+    </div>
+    <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+  </section>
+
+  <section>
+    <label class="switch-row">
+      <span>Labeling mode (show buttons on feed)</span>
+      <input type="checkbox" id="labelingToggle" />
+    </label>
+    <p class="hint">Turn this on, then scroll your YouTube home feed and tag ~30 videos as
+      🌱 Productive or ⚡ Dopamine.</p>
+  </section>
+
+  <section>
+    <button id="trainBtn">Train / retrain classifier</button>
+    <p id="trainStatus" class="hint"></p>
+  </section>
+
+  <section>
+    <label class="switch-row">
+      <span>Enable dynamic filter on feed</span>
+      <input type="checkbox" id="filterToggle" />
+    </label>
+    <p class="hint">Once trained, this hides feed videos predicted as dopamine-driven.</p>
+  </section>
+
+  <footer>
+    <a href="#" id="openOptions">Settings (API key & backend URL)</a>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
